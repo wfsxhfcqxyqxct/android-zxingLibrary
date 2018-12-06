@@ -83,6 +83,12 @@ public class CaptureFragment extends Fragment implements SurfaceHolder.Callback 
         return view;
     }
 
+    public void restartCamera() {
+        if (handler != null) {
+            handler.restartPreviewAndDecode();
+        }
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -254,7 +260,7 @@ public class CaptureFragment extends Fragment implements SurfaceHolder.Callback 
     }
 
     @Nullable
-    CameraInitCallBack callBack;
+    public CameraInitCallBack callBack;
 
     /**
      * Set callback for Camera check whether Camera init success or not.
@@ -266,6 +272,7 @@ public class CaptureFragment extends Fragment implements SurfaceHolder.Callback 
     interface CameraInitCallBack {
         /**
          * Callback for Camera init result.
+         *
          * @param e If is's null,means success.otherwise Camera init failed with the Exception.
          */
         void callBack(Exception e);
