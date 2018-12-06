@@ -260,7 +260,7 @@ public class CaptureFragment extends Fragment implements SurfaceHolder.Callback 
     }
 
     @Nullable
-    public CameraInitCallBack callBack;
+    CameraInitCallBack callBack;
 
     /**
      * Set callback for Camera check whether Camera init success or not.
@@ -269,7 +269,7 @@ public class CaptureFragment extends Fragment implements SurfaceHolder.Callback 
         this.callBack = callBack;
     }
 
-    interface CameraInitCallBack {
+    public interface CameraInitCallBack {
         /**
          * Callback for Camera init result.
          *
