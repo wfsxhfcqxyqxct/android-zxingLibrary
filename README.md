@@ -53,7 +53,7 @@
 - 在module的build.gradle中执行compile操作
 
 ```
-compile 'cn.wfsxhfcqxyqxct.android:zxing-library:V1.2'
+compile 'cn.wfsxhfcqxyqxct.android:zxing-library:V1.1'
 ```
 
 - 在demo Application中执行初始化操作
