@@ -23,7 +23,9 @@
 
 - compile 2.2 2017/07/04 更新zxing包，修复一些已知的bug
 
-- compile 2.2 2018/12/6 填充重复扫码开关
+
+
+- compile V1.2 2018/12/11 填充重复扫码开关
 
 
 **使用说明**
@@ -40,6 +42,8 @@
 
 - 支持控制闪光灯开关
 
+- 支持扫描失败后同一界面再次扫描
+
 **使用方式：**
 
 
@@ -50,7 +54,7 @@
 - 在module的build.gradle中执行compile操作
 
 ```
-compile 'cn.yipianfengye.android:zxing-library:2.2'
+compile 'cn.wfsxhfcqxyqxct.android:zxing-library:V1.2'
 ```
 
 - 在demo Application中执行初始化操作
@@ -388,5 +392,15 @@ CodeUtils.isLightEnable(true);
  */
  CodeUtils.isLightEnable(false);
 ```
+- 同个界面再次开启扫码功能
+```
+/**
+ * 再次扫码
+ */
+ captureFragment.restartCamera();
 
-也可以参考我的博客：<a href="http://blog.csdn.net/qq_23547831/article/details/52037710">几行代码快速集成二维码扫描库</a>
+ ```
+
+也可以参考原作者的博客：<a href="http://blog.csdn.net/qq_23547831/article/details/52037710">几行代码快速集成二维码扫描库</a>
+最后,如果文章很好的解决了你的问题,打赏下给瓶水喝吧~
+![image](https://github.com/wfsxhfcqxyqxct/android-zxingLibrary/blob/master/images/dspsb.jpg)
